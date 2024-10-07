@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo de Reportes</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Detección de defectos</h2>
+        <ul>
+            <li>Menú Principal</li>
+            <li>Detección Manual</li>
+            <li>Resumen Diario</li>
+        </ul>
+        <button class="close-session">Cerrar Sesión</button>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <input type="text" placeholder="Buscar Detalles...">
+        </div>
+        <h1>Bandeja de reportes By COGNEX</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>Electrodoméstico</th>
+                    <th>Tipo</th>
+                    <th>Cliente</th>
+                    <th>Fecha Reporte</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NRV-4500X</td>
+                    <td>NEVSA</td>
+                    <td>Nevera</td>
+                    <td>Abolladura Frontal</td>
+                    <td>Juan Pérez</td>
+                    <td>2024/09/30</td>
+                    <td><button>Ver</button></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>LVW- 3001Z</td>
+                    <td>NEVSA</td>
+                    <td>Nevera</td>
+                    <td>Falla en puerta</td>
+                    <td>Sebastian Montoya</td>
+                    <td>2024/09/19</td>
+                    <td><button>Ver</button></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>NRV-4100S</td>
+                    <td>NEVSA</td>
+                    <td>Lavadora</td>
+                    <td>Arañetazo lateral</td>
+                    <td>Julian Ferrer</td>
+                    <td>2024/09/05</td>
+                    <td><button>Ver</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
