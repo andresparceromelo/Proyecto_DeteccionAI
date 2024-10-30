@@ -13,3 +13,11 @@ function validateLogin() {
         return false; 
     }
 }
+// Ejemplo de solicitud GET
+fetch('/api/reportes')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    // Aquí puedes procesar los datos y mostrarlos en tu página
+  })
+  .catch(error => console.error('Error:', error));
