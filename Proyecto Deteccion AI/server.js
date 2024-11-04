@@ -5,15 +5,13 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
-// Configuración de la conexión a la base de datos
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'password',
-    database: 'reportes'
+    password: '',
+    database: 'qualitec'
 });
 
-// Conectar a la base de datos
 db.connect((err) => {
     if (err) {
         throw err;
@@ -23,8 +21,8 @@ db.connect((err) => {
 
 // Ruta para generar un reporte
 app.post('/generar_reporte', (req, res) => {
-    const { idUsuario, comentarios } = req.body; // Solo desestructuramos lo que vamos a usar
-    
+    const { idUsuario, comentarios } = req.body;
+
     const nuevoReporte = {
         ID_Usuario: idUsuario,
         Fecha_Reporte: new Date(),
@@ -32,19 +30,20 @@ app.post('/generar_reporte', (req, res) => {
         Comentarios: comentarios
     };
 
-    // Insertar el reporte en la base de datos
-    let sql = 'INSERT INTO Reportes SET ?';
-    
-    db.query(sql, nuevoReporte, (err) => {
+    // Consulta para insertar datos
+    let sql = "INSERT INTO reportes (ID_Usuario, Fecha_Reporte, Estado, Comentarios) VALUES (?, ?, ?, ?)";
+    let values = [nuevoReporte.ID_Usuario, nuevoReporte.Fecha_Reporte, nuevoReporte.Estado, nuevoReporte.Comentarios];
+
+    db.query(sql, values, (err) => {
         if (err) {
             res.status(500).send('Error al generar el reporte');
-            throw err;
+            console.error(err);
+            return;
         }
         res.send('Reporte generado exitosamente');
     });
 });
 
-// Configuración del servidor para escuchar en un puerto específico
 app.listen(3306, () => {
-    console.log('Servidor corriendo en el puerto 3000');
+    console.log('Servidor corriendo en el puerto 3306');
 });
