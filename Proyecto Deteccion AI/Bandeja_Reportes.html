@@ -72,3 +72,28 @@
     <script src="script2.js"></script>
 </body>
 </html>
+<script>
+    async function cargarReportes() {
+        const response = await fetch('/api/reportes');
+        const reportes = await response.json();
+        
+        const tbody = document.querySelector('table tbody');
+        tbody.innerHTML = '';  // Limpia el contenido previo
+
+        reportes.forEach(reporte => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${reporte.id}</td>
+                <td>${reporte.modelo}</td>
+                <td>${reporte.electrodomestico}</td>
+                <td>${reporte.tipo_defecto}</td>
+                <td>${reporte.cliente}</td>
+                <td>${reporte.fecha_reporte}</td>
+                <td><button>Ver</button></td>
+            `;
+            tbody.appendChild(row);
+        });
+    }
+
+    cargarReportes();
+</script>
