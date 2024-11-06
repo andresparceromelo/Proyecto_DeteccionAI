@@ -44,6 +44,6 @@ app.post('/generar_reporte', (req, res) => {
     });
 });
 
-app.listen(3306, () => {
-    console.log('Servidor corriendo en el puerto 3306');
+app.listen(4000, () => {
+    console.log('Servidor corriendo en el puerto 4000');
 });
