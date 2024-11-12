@@ -6,7 +6,10 @@ Este proyecto es una aplicación web para la gestión y detección de defectos e
 
 ### Carpetas Principales
 
-- **controller**: Contiene archivos HTML y recursos relacionados con la lógica de control de la aplicación.
+ **Controller**: Carpeta requerida para el normal desarrollo del ejecutable.
+
+  
+ **Proyecto Deteccion AI**: Contiene archivos HTML y recursos relacionados con la lógica de control de la aplicación.
   - `Bandeja_Reportes.html`
   - `detalle_nevera2.html`
   - `falla_nevera2.jpg`
@@ -23,11 +26,6 @@ Este proyecto es una aplicación web para la gestión y detección de defectos e
   - `script4.js`
   - `styles2.css`
   - `styles6.css`
-  - 
-- **fotos**: Contiene imágenes y scripts relacionados con el manejo de fotos y detalles de reportes.
-  - `DSC00336.JPG`
-    
-- **otros**: Archivos diversos y adicionales necesarios para el funcionamiento del proyecto.
   - `23.png`
   - `cerrar_sesion.html`
   - `deteccion_manual.html`
@@ -44,6 +42,11 @@ Este proyecto es una aplicación web para la gestión y detección de defectos e
   - `script.js`
   - `server.js`
   - `styles4.css`
+
+    
+ **fotos**: Contiene imágenes y scripts relacionados con el manejo de fotos y detalles de reportes.
+  - `DSC00336.JPG`
+  
 
 ## Uso
 
