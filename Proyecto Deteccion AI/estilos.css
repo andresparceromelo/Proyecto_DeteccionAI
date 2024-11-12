@@ -5,9 +5,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Menú lateral */
 .sidebar {
-    height: 100%;
     width: 200px;
     position: fixed;
     top: 0;
@@ -15,6 +18,11 @@
     background-color: #111;
     color: white;
     padding-top: 20px;
+    height: 100vh; /* Asegura que el menú lateral cubra toda la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio para que el botón quede al final */
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
 .sidebar h2 {
@@ -24,6 +32,8 @@
 
 .sidebar ul {
     list-style-type: none;
+    flex-grow: 1; /* Permite que la lista crezca y ocupe espacio extra */
+    width: 100%; /* Asegura que la lista ocupe todo el ancho del sidebar */
 }
 
 .sidebar ul li {
@@ -47,7 +57,7 @@
     border: none;
     padding: 10px;
     width: 80%;
-    margin: 20px auto;
+    margin: 20px 0;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
@@ -64,6 +74,7 @@
     margin-left: 220px;
     padding: 20px;
     height: 100vh;
+    overflow-y: auto;
 }
 
 .content h1 {
@@ -87,7 +98,7 @@ textarea {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     resize: vertical;
     transition: border-color 0.3s ease;
-    width: calc(100% - 22px); /* Adjust to compensate for padding */
+    width: calc(100% - 22px); /* Ajuste para compensar el padding */
 }
 
 textarea:focus {
