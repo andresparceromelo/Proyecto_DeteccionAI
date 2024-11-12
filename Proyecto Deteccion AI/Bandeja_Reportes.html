@@ -9,17 +9,23 @@
 <body>
     <div class="sidebar">
         <h2>Detección de defectos</h2>
+        <p>AI</p>
+        <h3>Ventanas</h3>
         <ul>
-            <li>Menú Principal</li>
-            <li>Detección Manual</li>
-            <li>Resumen Diario</li>
+            <li><a href="Bandeja_Reportes.html">Menú Principal</a></li>
+            <li><a href="deteccion_manual.html">Detección Manual</a></li>
+            <li><a href="resumen_diario.html">Resumen Diario</a></li>
         </ul>
         <button class="close-session">Cerrar Sesión</button>
     </div>
     <div class="main-content">
         <div class="header">
-            <img src="logo.png" alt="Logo" class="logo">
-            <input type="text" placeholder="Buscar Detalles...">
+            <label>
+                <input type="text" placeholder="Buscar Detalles...">
+            </label>
+            <button>Filtrar</button>
+            <img src="logo.png" alt="Cognex Logo" class="logo">
+            <img src="Qualitech_Logo.png" alt="Qualitec Logo" class="logo">
         </div>
         <h1>Bandeja de reportes By COGNEX</h1>
         <table>
@@ -28,6 +34,7 @@
                     <th>ID</th>
                     <th>Modelo</th>
                     <th>Electrodoméstico</th>
+                    <th>Foto</th>
                     <th>Tipo</th>
                     <th>Cliente</th>
                     <th>Fecha Reporte</th>
@@ -36,39 +43,56 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>1</td>
                     <td>NRV-4500X</td>
-                    <td>NEVSA</td>
-                    <td>Nevera</td>
+                    <td>NEVERA</td>
+                    <td><img src="nevera1.jpg" alt="Foto 1"></td>
                     <td>Abolladura Frontal</td>
                     <td>Juan Pérez</td>
-                    <td>2024/09/30</td>
-                    <td><button>Ver</button></td>
+                    <td>2024/09/20</td>
+                    <td><button onclick="verDetalle(1)">Ver</button></td>
                 </tr>
-            </tbody>
-            <tbody>
                 <tr>
-                    <td>LVW- 3001Z</td>
-                    <td>NEVSA</td>
-                    <td>Nevera</td>
+                    <td>2</td>
+                    <td>LVW-3001Z</td>
+                    <td>NEVERA</td>
+                    <td><img src="nevera2.jpg" alt="Foto 2"></td>
                     <td>Falla en puerta</td>
                     <td>Sebastian Montoya</td>
                     <td>2024/09/19</td>
-                    <td><button>Ver</button></td>
+                    <td><button onclick="verDetalle(2)">Ver</button></td>
                 </tr>
-            </tbody>
-            <tbody>
                 <tr>
+                    <td>3</td>
                     <td>NRV-4100S</td>
-                    <td>NEVSA</td>
-                    <td>Lavadora</td>
+                    <td>LAVADORA</td>
+                    <td><img src="lavadora.png" alt="Foto 3"></td>
                     <td>Arañetazo lateral</td>
                     <td>Julian Ferrer</td>
                     <td>2024/09/05</td>
-                    <td><button>Ver</button></td>
+                    <td><button onclick="verDetalle(3)">Ver</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <script src="script2.js"></script>
+    <script>
+    function verDetalle(id) {
+        let url;
+        switch (id) {
+            case 1:
+                url = 'reporte_detalle.html?id=1';
+                break;
+            case 2:
+                url = 'detalle_nevera2.html?id=2';
+                break;
+            case 3:
+                url = 'detalle_lavadora.html?id=3';
+                break;
+            default:
+                url = 'reporte_detalle.html';
+        }
+        window.location.href = url;
+    }
+</script>
 </body>
 </html>

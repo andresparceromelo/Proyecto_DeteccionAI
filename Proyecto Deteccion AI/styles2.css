@@ -1,65 +1,131 @@
-/* styles.css */
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
-    margin: 0;
     font-family: Arial, sans-serif;
 }
 
 .sidebar {
-    width: 250px;
-    background-color: #f4f4f4;
+    width: 220px;
+    background-color: #333;
+    color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sidebar h2 {
-    font-size: 18px;
+.sidebar h2, .sidebar h3, .sidebar p {
+    text-align: center;
 }
 
 .sidebar ul {
     list-style-type: none;
-    padding: 0;
+    width: 100%;
 }
 
-.sidebar li {
-    margin: 10px 0;
+.sidebar ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: #444;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
 }
 
 .close-session {
-    margin-top: 20px;
+    background-color: red;
+    color: white;
+    border: none;
     padding: 10px;
+    width: 100%;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .main-content {
-    flex-grow: 1;
+    flex: 1;
     padding: 20px;
+    overflow-y: auto;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.header button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .header .logo {
-    height: 50px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+h1 {
+    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+}
+
+thead {
+    background-color: #f0f0f0;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffcc00;
     border: none;
     padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6b800;
 }

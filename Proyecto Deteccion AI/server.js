@@ -43,7 +43,3 @@ app.post('/generar_reporte', (req, res) => {
         res.send('Reporte generado exitosamente');
     });
 });
-
-app.listen(4000, () => {
-    console.log('Servidor corriendo en el puerto 4000');
-});
