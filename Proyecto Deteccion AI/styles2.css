@@ -7,27 +7,30 @@
 
 html, body {
     height: 100%;
+    font-family: 'Roboto', sans-serif; /* Cambiar a una fuente más moderna */
 }
 
 body {
     display: flex;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    background-color: #f4f7fa; /* Color de fondo más claro */
 }
 
 .sidebar {
     width: 220px;
-    background-color: #333;
+    background-color: #2c3e50; /* Color de la barra lateral más suave */
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh; /* Asegura que la barra lateral cubra toda la altura */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
 .sidebar h2, .sidebar h3, .sidebar p {
     text-align: center;
+    margin: 10px 0;
 }
 
 .sidebar ul {
@@ -44,26 +47,32 @@ body {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px;
-    background-color: #444;
+    padding: 12px;
+    background-color: #34495e; /* Color más amigable */
     margin: 5px 0;
     border-radius: 5px;
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 .sidebar ul li a:hover {
-    background-color: #575757;
+    background-color: #1abc9c; /* Color de hover más vibrante */
 }
 
 .close-session {
-    background-color: red;
+    background-color: #e74c3c; /* Color rojo más brillante */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     width: 100%;
     margin-top: auto;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.close-session:hover {
+    background-color: #c0392b; /* Color de hover más oscuro */
 }
 
 .main-content {
@@ -80,40 +89,54 @@ body {
 }
 
 .header input[type="text"] {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s; /* Transición suave */
+}
+
+.header input[type="text"]:focus {
+    border-color: #1abc9c; /* Color de enfoque más vibrante */
 }
 
 .header button {
-    background-color: #ccc;
+    background-color: #1abc9c; /* Botón más atractivo */
+    color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.header button:hover {
+    background-color: #16a085; /* Color de hover más oscuro */
 }
 
 .header .logo {
-    width: 100px;
+    width: 120px;
     margin-left: 10px;
 }
 
 h1 {
     margin-bottom: 20px;
+    color: #2c3e50; /* Color de encabezado más oscuro */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
 thead {
-    background-color: #f0f0f0;
+    background-color: #2c3e50; /* Encabezado de tabla más oscuro */
+    color: white; /* Texto blanco en el encabezado */
 }
 
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
@@ -125,13 +148,14 @@ td img {
 }
 
 button {
-    background-color: #ffcc00;
+    background-color: #ffcc00; /* Botón original */
     border: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 button:hover {
-    background-color: #e6b800;
+    background-color: #e6b800; /* Color de hover más oscuro */
 }

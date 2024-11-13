@@ -1,18 +1,21 @@
 body {
     display: flex;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Fuente más moderna */
+    background-color: #ecf0f1; /* Color de fondo más claro para toda la página */
 }
 
 .sidebar {
-    background-color: #333;
+    background-color: #2c3e50; /* Color más suave para el menú lateral */
     color: white;
     width: 250px;
     padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
 .sidebar h2, .sidebar h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0; /* Espaciado mejorado */
+    color: #ecf0f1; /* Color más claro para los encabezados */
 }
 
 .sidebar p {
@@ -32,36 +35,47 @@ body {
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px;
-    background-color: #444;
+    padding: 12px; /* Aumentar el padding para una mejor usabilidad */
+    background-color: #34495e; /* Color más amigable para los enlaces */
     border-radius: 5px;
     text-align: center;
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 .sidebar a:hover {
-    background-color: #555;
+    background-color: #1abc9c; /* Color de hover más vibrante */
 }
 
 .logout {
-    background-color: red;
+    background-color: #e74c3c; /* Color rojo más brillante */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px; /* Aumentar el padding */
     width: 100%;
     margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.logout:hover {
+    background-color: #c0392b; /* Color de hover más oscuro */
 }
 
 .main-content {
     flex: 1;
     padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el contenido principal */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
 }
 
 .search-bar {
@@ -70,12 +84,31 @@ header {
 }
 
 .search-bar input {
-    padding: 5px;
+    padding: 10px; /* Aumentar padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transición suave */
+    width: 250px; /* Ancho fijo para la barra de búsqueda */
+}
+
+.search-bar input:focus {
+    border-color: #1abc9c; /* Color de enfoque más vibrante */
+    outline: none; /* Sin contorno */
 }
 
 .search-bar button {
     margin-left: 10px;
-    padding: 5px 10px;
+    padding: 10px 15px; /* Aumentar padding */
+    background-color: #1abc9c; /* Color atractivo para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.search-bar button:hover {
+    background-color: #16a085; /* Color de hover más oscuro */
 }
 
 .general-summary, .report-list {
@@ -87,13 +120,16 @@ header {
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px; /* Aumentar padding */
     margin-bottom: 20px;
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
 .product-card img, .report-card img {
     max-width: 150px;
     margin-right: 20px;
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
 }
 
 .product-info, .report-info {
@@ -102,8 +138,10 @@ header {
 
 .product-info h3, .report-info h3 {
     margin: 0 0 10px 0;
+    color: #2c3e50; /* Color de encabezado más oscuro */
 }
 
 .product-info p, .report-info p {
     margin: 5px 0;
+    color: #34495e; /* Color del texto más suave */
 }

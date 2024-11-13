@@ -5,6 +5,5 @@ document.getElementById('back-button').addEventListener('click', () => {
 });
 
 document.getElementById('edit-button').addEventListener('click', () => {
-    alert("Funcionalidad de edición no implementada en esta versión."); 
-    // Aquí podrías redirigir a una página de edición o abrir un modal, etc.
+    alert("Iras al apartado de deteccion manual para generar tu reporte.");
 });
