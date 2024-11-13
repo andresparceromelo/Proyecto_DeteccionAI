@@ -17,15 +17,15 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $descripcion = $conn->real_escape_string($_POST['report']);
 
-    // Insertar en la base de datos
-    $sql = "INSERT INTO reportes (descripcion) VALUES ('$descripcion')";
+// Insertar el reporte en la base de datos
+$sql = "INSERT INTO reportes (Nuevos_Reportes) VALUES ('$reporte')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Reporte guardado exitosamente.";
-    } else {
+ if ($conn->query($sql) === TRUE) {
+    echo "Reporte guardado exitosamente.";
+        } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     }
-}
 
 // Cerrar conexión
 $conn->close();

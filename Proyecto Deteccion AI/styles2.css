@@ -16,6 +16,17 @@ body {
     background-color: #f4f7fa; /* Color de fondo más claro */
 }
 
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ecf0f1; /* Color más claro para el título */
+}
+.sidebar ul {
+    list-style-type: none;
+    flex-grow: 1; /* Permite que la lista crezca y ocupe espacio extra */
+    width: 100%; /* Asegura que la lista ocupe todo el ancho del sidebar */
+}
+
 .sidebar {
     width: 220px;
     background-color: #2c3e50; /* Color de la barra lateral más suave */
@@ -141,10 +152,31 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+textarea {
+    margin-bottom: 20px;
+    padding: 12px; /* Aumentar padding */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    transition: border-color 0.3s ease; /* Transición suave */
+    width: calc(100% - 24px); /* Ajuste para compensar el padding */
+}
+
+textarea:focus {
+    border-color: #1abc9c; /* Color de enfoque más vibrante */
+    outline: none;
+}
+
 td img {
     width: 50px;
     height: auto;
     border-radius: 5px;
+}
+
+textarea:focus {
+    border-color: #1abc9c; /* Color de enfoque más vibrante */
+    outline: none;
 }
 
 button {
@@ -158,4 +190,13 @@ button {
 
 button:hover {
     background-color: #e6b800; /* Color de hover más oscuro */
+}
+
+#savedReport {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
 }
