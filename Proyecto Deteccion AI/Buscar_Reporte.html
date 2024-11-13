@@ -13,9 +13,14 @@
         <h3>Ventanas</h3>
         <ul>
             <li><a href="Bandeja_Reportes.html">Menú Principal</a></li>
-            <li><a href="resumen_diario.html">Resumen Diario</a></li>
+            <li><a href="Deteccion_AI.html">Deteccion_AI</a></li>
         </ul>
-        <button class="logout">Cerrar Sesión</button>
+        <button class="close-session" onclick="cerrarSesion()">Cerrar Sesión</button>
+        <script>
+            function cerrarSesion() {
+             window.location.href = 'index.html';
+            }
+        </script>
     </div>
     <div class="main-content">
         <header>

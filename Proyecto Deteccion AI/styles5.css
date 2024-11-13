@@ -46,20 +46,21 @@ body {
     background-color: #1abc9c; /* Color de hover más vibrante */
 }
 
-.logout {
+/* Estilo del botón Cerrar Sesión */
+.close-session {
     background-color: #e74c3c; /* Color rojo más brillante */
     color: white;
     border: none;
     padding: 12px; /* Aumentar el padding */
     width: 100%;
-    margin-top: 20px;
+    margin-top: auto; /* Para que se mantenga al final de la barra lateral */
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s; /* Transición suave */
 }
 
-.logout:hover {
+.close-session:hover {
     background-color: #c0392b; /* Color de hover más oscuro */
 }
 
